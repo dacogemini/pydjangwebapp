@@ -1,6 +1,6 @@
 <!-- We’re going to strip out all website-common code from index.html 
 and stick it into base.html: -->
-
+<!-- Tell Django that there are static files top be used on this page: -->
 {% load staticfiles %}
 <!doctype html>
 <html>
@@ -15,9 +15,24 @@ and stick it into base.html: -->
     <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
     {% block header %}{% endblock header %}
 </head>
-
 <body>
-    {% block content}{% endblock content %}
-    {% block footer}{% endblock footer %}
+    <header>
+        <h1>Web App</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">HOME</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">ABOUT</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}{% endblock content %}
+    {% block footer %}{% endblock footer %}
 </body>
 </html>
