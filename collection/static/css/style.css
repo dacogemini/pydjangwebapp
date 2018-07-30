@@ -1,14 +1,35 @@
 body {
-    background-image: url(../images/maxresdefault.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../images/Market.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
 }
 h1 {
     font-family: 'Passion One', cursive;
     color: aliceblue;
     font-size: 3em;
+    margin-top: -10px;
 }
 h2 {
     font-family: 'Passion One', cursive;
     color: aliceblue;
     font-size: 3em;
+}
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
 }
