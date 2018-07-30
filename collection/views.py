@@ -4,5 +4,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    # This is your new view
-    return render(request, 'index.html')
+    # Define a variable here: 
+    # Passing the variable through the view:
+    return render(request, 'index.html', {
+    })
